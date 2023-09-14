@@ -1,0 +1,14 @@
+<?php 
+
+include './connect.php';
+// $table = "users";
+// // $name = filterRequest("namerequest");
+// $data = array( 
+// "users_name" => "wael",
+// "users_email" => "wael@gmail.com",
+// "users_phone" => "324234",
+// "users_verifycode" => "3243243",       
+// );
+// $count = insertData($table , $data);
+
+mail("hbakheet2002@gmail.com", "verify code", "0598");
