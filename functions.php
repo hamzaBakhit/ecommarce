@@ -147,9 +147,20 @@ function checkAuthenticate()
 function  printFailure($message = "none"){
     echo json_encode(array("status"=> "failure", "message"=> $message));
   }
+
+function  printSuccess($message = ""){
+    echo json_encode(array("status"=> "success", "message"=> $message));
+  }
+
+  function result($count){
+        if($count>0){
+            printSuccess();
+        }else{
+            printFailure();
+        }
+  }
  
   function sendEmail ( $to,$title  ,$body ){
  $header = "FORM: support@gmail.com" . "\n" . "CC: hamzaqwer0599@gmail.com";
  mail($to, $title, $body, $header);
- echo "send email done successfully";
   }
